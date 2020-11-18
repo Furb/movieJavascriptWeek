@@ -25,6 +25,17 @@ var movies = {
 	},
 };
 
+fetch()
+	.then(respnse => {
+	return Response.json();
+	})
+	.then(data => {
+	data.forEach(movies => {
+		const card = document.createElement('div');
+        card.setAttribute('class', 'trailer container');
+		
+	});
+	})
 
 let youtube = {
 	getIdFromUrl: function (videoIdOrUrl) {
