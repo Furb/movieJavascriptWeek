@@ -1,8 +1,14 @@
 /* Global styles */
 
-* {
+*,
+*::before,
+*::after
+ {
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 
 body {
 	font-family: 'Poppins', sans-serif;
@@ -11,12 +17,35 @@ body {
 	background: hotpink;
 }
 
+
+/* General styles */
+
+.container	{
+	max-width: 75vw;
+	margin: 0 auto;
+}
+
+
+header, footer {
+	padding: 5vh 0;
+}
+
+
+img {
+
+	max-width: 400px;
+	width: 100%;
+	height: auto;
+}
+
+/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	font-family: 'Nunito Sans', sans-serif;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
-	color: #DBD9D2;
+	color: rgb(23, 177, 2);
 }
 
 h1 {
@@ -34,14 +63,6 @@ h4 {
 	margin-bottom: 0.5em;
 }
 
-img {
-
-	max-width: 400px;
-	width: 100%;
-	height: auto;
-}
-
-
 
 a {
 	text-decoration: none;
@@ -51,19 +72,13 @@ a:hover {
 	color: #fff;
 }
 
-header, footer {
-	padding: 5vh 0;
-}
+
 
 .logo {
 width: 250px;
 }
 
 
-.container	{
-	max-width: 75vw;
-	margin: 0 auto;
-}
 
 footer .popcorn {
 	max-width: 150px;
@@ -107,8 +122,6 @@ margin-bottom: 5vh;
 .movieCard {
 	text-align: center;
 }
-
-
 
 
 

@@ -1,30 +1,36 @@
 var movies = {
 	"Willow": {
-		"Name": "Willow",
-		"YouTubeId": "v=uzn2izehkno"
+		"Title": "Willow",
+		"YouTubeId": "v=uzn2izehkno",
+		"API": "http://www.omdbapi.com/?t=Willow&apikey=dab96338"
 	},
 	"UP": {
 		"Title": "Up",
-		"YouTubeId": "ORFWdXl_zJ4"
+		"YouTubeId": "ORFWdXl_zJ4",
+		"API": "http://www.omdbapi.com/?t=Up&apikey=dab96338"
 	},
   	 "Lord of the Rings": {
 		"Title": "Lord of the Rings",
-		"YouTubeId": "V75dMMIW2B4 "
+		"YouTubeID": "V75dMMIW2B4 ",
+		"API": "http://www.omdbapi.com/?t=Lord+of+the+rings&apikey=dab96338"
 	},
   	"The Princess Bride": {
   		"Title": "The princess bride",
-        		"YouTubeId": "WNNUcHRiPS8"
+		"YouTubeId": "WNNUcHRiPS8",
+		"API": "http://www.omdbapi.com/?t=The+princess+bride&apikey=dab96338"
+		
 	},
 	"Alice in Wonderland": {
 		"Title": "Alice in Wonderland",
-		"YouTubeId": "P_IVeP3i7B0"
+		"YouTubeId": "P_IVeP3i7B0",
+		"API": "http://www.omdbapi.com/?t=Alice+in+wonderland&apikey=dab96338"
 	},
 	"Indiana Jones": {
-		"Name": "Indiana Jones",
-		"YouTubeId": "v=Rh_BJXG1-44"
+		"Title": "Indiana Jones",
+		"YouTubeId": "v=Rh_BJXG1-44",
+		"API": "http://www.omdbapi.com/?t=Indiana+jones&apikey=dab96338"
 	},
 };
-
 
 let youtube = {
 	getIdFromUrl: function (videoIdOrUrl) {
@@ -44,19 +50,33 @@ let youtube = {
 		return 'https://www.youtube.com/embed/' + youtube.getIdFromUrl(videoIdOrUrl);
 	}
 };
+const app = document.getElementById("root")
 
-let url = 'http://www.omdbapi.com/?t=lord+of+the+rings&apikey=dab96338';
-
-fetch(url)
-	.then(response => {
-		return response();
+//fetch the movies variable in this file
+fetch(movies)
+	.then(respnse => {
+	return Response.json();
 	})
+//construct a div with the class trailer container
 	.then(data => {
-		data.forEach(movie => {
-			const movieCard = document.createElement('div');
-			movieCard.setAttribute('class', 'movieCard');
+	data.forEach(movies => {
+		const video = document.createElement('div');
+		video.setAttribute('class', 'trailer');
 
-			const 
+		//add title to the movie
+		const h2 = document.createElement('h2');
+		h2.textContent = movies.Title
+	
+		video.appendChild(h2);
+		
+
+		
+	
+		
 		})
 	})
-
+	.catch(err =>  {
+	const errorMessage = document.createElement('marquee');
+	errorMessage.textContent = "It's not working";
+	app.appendChild(errorMessage);
+	});

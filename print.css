@@ -5,3 +5,10 @@
     color: #010203;
     background-color: #fff;
   }
+
+
+  /* don't display on print */
+
+  img, .topSectionIndex, .topSectionSingle, .goBack   {
+  	display: none !important;
+  }
