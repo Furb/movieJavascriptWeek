@@ -84,7 +84,7 @@ movies.forEach(movie => {
 	//const h2 = document.createElement('h2');
 	//h2.textContent = movie.Title
 
-	let div=document.createElement('div');
+	let div=document.createElement('article');
 	div.setAttribute("id",movie.Title);
 	let htmldiv=document.getElementById('movieInfo');
 	htmldiv.appendChild(div);
@@ -103,11 +103,15 @@ movies.forEach(movie => {
 			img.src = data.Poster;
 			div.appendChild(img);
 
-
 			const p = document.createElement('p');
-			p.textContent = data.Plot + "\n" + data.Year;
+			p.setAttribute("id", description);
+			p.textContent = data.Plot;
 			div.appendChild(p);
-
+			
+			const date = document.createElement('p');
+			date.setAttribute("id", releaseYear);
+			date.textContent = data.Year;
+			div.appendChild(date);
 			
 		})
 
