@@ -86,7 +86,7 @@ movies.forEach(movie => {
 
 	let div=document.createElement('article');
 	div.setAttribute("id",movie.Title);
-	let htmldiv=document.getElementById('movieInfo');
+	let htmldiv=document.getElementById('movieList');
 	htmldiv.appendChild(div);
 	//get from API
 	apiUrl = movie.API;
@@ -94,10 +94,10 @@ movies.forEach(movie => {
 
 		.then(response => { return response.json(); })
 		.then(data => {
-			const h3 = document.createElement('h3');
-			h3.textContent = data.Title;
+			const h4 = document.createElement('h4');
+			h4.textContent = data.Title;
 			let div=document.getElementById(data.Title);
-			div.appendChild(h3);
+			div.appendChild(h4);
 
 			const img = document.createElement('img');
 			img.src = data.Poster;
@@ -107,12 +107,12 @@ movies.forEach(movie => {
 			p.setAttribute("id", description);
 			p.textContent = data.Plot;
 			div.appendChild(p);
-			
+
 			const date = document.createElement('p');
 			date.setAttribute("id", releaseYear);
-			date.textContent = data.Year;
+			date.textContent = "year: " + data.Year;
 			div.appendChild(date);
-			
+
 		})
 
 		.catch(err => {

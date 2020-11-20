@@ -1,5 +1,6 @@
 /* Global styles */
 
+/* gets font from google*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Poppins:wght@300;400;600&display=swap');
 
 
@@ -12,6 +13,7 @@
 	box-sizing: border-box;
 }
 
+/* General styles */
 
 body {
 	font-family: 'Poppins', sans-serif;
@@ -20,8 +22,6 @@ body {
 	background: #40155A;
 }
 
-
-/* General styles */
 
 .container	{
 	max-width: 75vw;
@@ -60,9 +60,12 @@ h2 {
 }
 
 h4 {
-	font-size: 1.2em;
-	font-weight: 300 !important;
-	margin-bottom: 0.5em;
+	font-size: 1rem;
+	font-weight: 400 !important;
+	padding: 2em 0 1em;
+  text-align: center;
+  order: 2;
+
 }
 
 
@@ -74,13 +77,20 @@ a:hover {
 	color: #fff;
 }
 
+p {
+  color: #0e0e0e;
+  font-size: 0.8rem;
+}
+
 
 
 .logo {
 width: 250px;
 }
 
-
+footer p{
+  color: #fff;
+}
 
 footer .popcorn {
 	max-width: 150px;
@@ -97,16 +107,12 @@ footer .container {
 }
 
 
-
-/* homepage */
-
 .topSectionIndex {
 	background: url('images/bgreel-1.jpg') no-repeat;
 	background-size: cover;
-	background-position: center bottom; 
+	background-position: center bottom;
 	min-height: 60vh;
 }
-
 
 
 #movieList {
@@ -120,56 +126,19 @@ footer .container {
 
 #movieList article{
 margin-bottom: 5vh;
-}
-.movieCard {
-	text-align: center;
-}
-
-
-
-
-
-/* single movie */
-
-
-.topSectionSingle {
-	background: url('images/bgreel-3.jpg') no-repeat;
-	background-size: cover;
-	background-position: center bottom; 
-	min-height: 60vh;
+display: flex;
+flex-direction: column;
 }
 
-.goBack {
-	color: #DBD9D2;
+#movieList article img {
+  order: 1;
 }
 
-.trailer {
-	text-align: center;
+#movieList article p  {
+  order: 3;
+  padding: 1em 0;
 }
 
-.movieInfo {
-	padding: 10vh 0 5vh;
-}
-
-.movieInfo article, .movieInfo aside {
-	margin-bottom: 5vh;
-}
-
-
-aside .info {
-	display: flex;
-	justify-content: flex-start;
-	padding: 0 0 2vh 0;
-}
-
-.info .infoLeft {
-	width: 150px;
-	color: #f25f25;
-}
-
-.info .infoRight ul {
-	list-style: none;
-}
 
 
 
