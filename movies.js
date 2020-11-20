@@ -32,7 +32,7 @@ var movies = [
 		"API": "http://www.omdbapi.com/?t=Indiana+jones&apikey=dab96338"
 	}]
 
-/*
+
 
 let youtube = {
 getIdFromUrl: function (YouTubeId) {
@@ -53,7 +53,7 @@ generateEmbedUrl: function (YouTubeId) {
 }
 };
 
-*/
+
 
 //finding the root element
 const app = document.getElementById('root');
@@ -74,6 +74,11 @@ app.appendChild(container);
 movies.forEach(movie => {
 	const video = document.createElement('div');
 	video.setAttribute('class', 'trailer');
+
+//add this to where we want the trailer
+//youtube.generateEmbedUrl()
+
+
 
 	//add title to the movie
 	const h2 = document.createElement('h2');
