@@ -33,7 +33,7 @@ var movies = [
 	}]
 
 
-
+/*
 let youtube = {
 getIdFromUrl: function (YouTubeId) {
 	if (YouTubeId.indexOf('http') === 0) {
@@ -53,7 +53,7 @@ generateEmbedUrl: function (YouTubeId) {
 }
 };
 
-
+*/
 
 //finding the root element
 const app = document.getElementById('root');
@@ -81,8 +81,8 @@ movies.forEach(movie => {
 
 
 	//add title to the movie
-	const h2 = document.createElement('h2');
-	h2.textContent = movie.Title
+	//const h2 = document.createElement('h2');
+	//h2.textContent = movie.Title
 
 	let div=document.createElement('div');
 	div.setAttribute("id",movie.Title);
@@ -98,6 +98,17 @@ movies.forEach(movie => {
 			h3.textContent = data.Title;
 			let div=document.getElementById(data.Title);
 			div.appendChild(h3);
+
+			const img = document.createElement('img');
+			img.src = data.Poster;
+			div.appendChild(img);
+
+
+			const p = document.createElement('p');
+			p.textContent = data.Plot + "\n" + data.Year;
+			div.appendChild(p);
+
+			
 		})
 
 		.catch(err => {
