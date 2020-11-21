@@ -2,34 +2,34 @@ var movies = [
 	{
 		"Title": "Willow",
 		"YouTubeId": "v=uzn2izehkno",
-		"API": "http://www.omdbapi.com/?t=Willow&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=Willow&apikey=dab96338"
 	},
 
 	{
 		"Title": "Up",
 		"YouTubeId": "ORFWdXl_zJ4",
-		"API": "http://www.omdbapi.com/?t=Up&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=Up&apikey=dab96338"
 	},
 	{
 		"Title": "The Lord of the Rings: The Fellowship of the Ring",
 		"YouTubeId": "V75dMMIW2B4 ",
-		"API": "http://www.omdbapi.com/?t=Lord+of+the+rings&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=Lord+of+the+rings&apikey=dab96338"
 	},
 	{
 		"Title": "The Princess Bride",
 		"YouTubeId": "WNNUcHRiPS8",
-		"API": "http://www.omdbapi.com/?t=The+princess+bride&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=The+princess+bride&apikey=dab96338"
 
 	},
 	{
 		"Title": "Alice in Wonderland",
 		"YouTubeId": "P_IVeP3i7B0",
-		"API": "http://www.omdbapi.com/?t=Alice+in+wonderland&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=Alice+in+wonderland&apikey=dab96338"
 	},
 	{
 		"Title": "Indiana Jones and the Last Crusade",
 		"YouTubeId": "v=Rh_BJXG1-44",
-		"API": "http://www.omdbapi.com/?t=Indiana+jones&apikey=dab96338"
+		"API": "https://www.omdbapi.com/?t=Indiana+jones&apikey=dab96338"
 	}]
 
 
